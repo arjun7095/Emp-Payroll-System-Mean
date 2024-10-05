@@ -1,0 +1,24 @@
+.login{
+    
+    background-size: cover;
+    color: white;
+    height: 100vh;
+}
+.login fieldset{
+    padding-top: 150px;
+  
+}
+.login label,input{
+    font-size: 20px;
+    margin: 5px;
+}
+.auth-btn{
+    background-color: inherit;
+    color: orange;
+    font-size: 20px;
+    margin: 10px;
+}
+.auth-btn:hover{
+    background-color: green;
+    color: white;
+}

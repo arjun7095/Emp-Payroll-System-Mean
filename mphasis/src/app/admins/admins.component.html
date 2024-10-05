@@ -1,0 +1,11 @@
+<div class="admin">
+<app-adminsnav></app-adminsnav>
+<div *ngIf="!loggedIn" class="home">
+    <h2>Welcome To, Mphasis EPM System</h2>
+    <p>PAYROLL</p>
+    <p id="quote">The system has an automated time and attendence solution which reduces <br/>the amount of time needed to prepare data for payroll, eliminate payroll <br/>errors and improve workforce management. </p>
+    <button type="button" (click)="handleDashboard()">Get Started >>></button>
+
+</div>
+<router-outlet></router-outlet>
+</div>

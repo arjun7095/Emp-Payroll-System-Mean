@@ -1,0 +1,20 @@
+.main{
+    background-color: rgb(25, 25, 40);
+}
+.salary{
+    color: white;
+    height: 100vh;
+}
+.salary button{
+    background-color: inherit;
+    color: orangered;
+    margin-top: 20px;
+}
+.salary button:hover{
+    background-color: green;
+    color: white;
+    
+}
+.salary select,label{
+    margin-right: 20px;
+}

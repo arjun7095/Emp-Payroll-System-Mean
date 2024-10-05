@@ -1,0 +1,44 @@
+
+/* salary.component.css */
+.salary-table {
+    width: 1000px;
+    border-collapse: collapse;
+  }
+  
+  .salary-table th, .salary-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: black;
+    background-color: white;
+  }
+  
+  .salary-table th {
+    background-color: #f2f2f2;
+    color: black;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  .main{
+    background-color: rgb(25, 25, 40);
+  }
+  .salary{
+    color: white;
+    height: 100vh;
+  }
+  .salary label{
+    font-size: 20px;
+    margin: 10px;
+  }
+  .salary button{
+    background-color: inherit;
+    color: orangered;
+  }
+  .salary button:hover{
+    background-color: green;
+    color: white;
+  }
+  .salary-table h2{
+    color: red;
+  }

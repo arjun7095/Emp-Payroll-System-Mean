@@ -1,0 +1,43 @@
+<div class="main">
+<app-adminsnav></app-adminsnav>
+<div class="dash" align="center">
+    <h2>Admin Dashboard</h2>
+    <hr />
+    <input type="text" placeholder="Emp ID" [(ngModel)]="empId" />
+    <input type="text" placeholder="Name" [(ngModel)]="name" />
+    <input type="text" placeholder="Email" [(ngModel)]="email" />
+    <input type="text" placeholder="Category" [(ngModel)]="category" />
+    
+    <input type="text" placeholder="Address" [(ngModel)]="address" />
+    <hr />
+    <button  (click)="getDataButton_click()">Get Data</button>
+    <button (click)="updateEmp_click()">Update</button>
+    <hr />
+    <table border="2px" cellSpacing="0" width="800">
+      <thead>
+        <tr>
+          <th>EmpID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Category</th>
+          <th>Address</th>
+          <th colspan="3">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of EmpArray; trackBy: trackByEmpId">
+          <td>{{ item.empId }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.email }}</td>
+          <td>{{ item.category }}</td>
+          <td>{{ item.address }}</td>
+          
+          <td align="center"><a href="javascript:void(0);" (click)="deleteEmp_click(item.empId)"><img src="../../../assets/images/delete.png" width="20" alt="Delete" /></a></td>
+          <td align="center"><a href="javascript:void(0);" (click)="editEmp(item)"><img src="../../../assets/images/select.png" width="20" alt="Update" /></a></td>
+        </tr>
+      </tbody>
+    </table>
+  
+    
+  </div>
+</div> 

@@ -1,0 +1,22 @@
+.main{
+    background-color: rgb(25,25,40);
+}
+.leaves{
+    color: white;
+    height: 100vh;
+  
+
+}
+.leaves label{
+    width: 150px;
+    font-size: 20px;
+}
+.leaves button{
+    background-color: inherit;
+    color: orangered;
+    margin-top: 10px;
+}
+.leaves button:hover{
+    background-color: green;
+    color: white;
+}

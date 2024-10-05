@@ -1,0 +1,31 @@
+.home{
+    background-image: url('/assets/images/home2.jpg');
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    padding-left: 50px;
+}
+.home h2{
+    padding-top: 100px;
+}
+.home p{
+    font-size: 90px;
+}
+.admin{
+    background-color: rgb(25, 25, 40);
+}
+#quote{
+    font-size: 20px;
+}
+.home button{
+    background-color: inherit;
+    color: orangered;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+.home button:hover{
+    background-color: green;
+    color: white;
+}

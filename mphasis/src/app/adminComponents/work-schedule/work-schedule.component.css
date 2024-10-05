@@ -1,0 +1,88 @@
+.work-schedule-container {
+    background-color: #e7ecf1;
+    width: 70%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+  }
+  
+  .work-schedule-container h2 {
+    color: #343a40;
+  }
+  
+  .work-schedule-form {
+    border: 1px solid #ced4da;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .work-schedule-form form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .work-schedule-form label {
+    font-weight: bold;
+    color: #495057;
+  }
+  
+  .work-schedule-form input[type="text"],
+  .work-schedule-form input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #115599;
+    border-radius: 4px;
+  }
+  
+  .work-schedule-form button {
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #115599;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .work-schedule-form button:hover {
+    background-color: #66a5e9;
+  }
+  
+  .work-schedule-error-message {
+    color: red;
+  }
+  
+  .work-schedule-success-message {
+    color: green;
+  }
+  
+  .work-schedule-table {
+    border: 2px solid #333;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .work-schedule-table th,
+  .work-schedule-table td {
+    border: 1px solid #333;
+    padding: 8px;
+  }
+  
+  .work-schedule-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .work-schedule-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .work-schedule-table tr:hover {
+    background-color: #ddd;
+  }
+  .main{
+    background-color: rgb(25, 25, 40);
+  }

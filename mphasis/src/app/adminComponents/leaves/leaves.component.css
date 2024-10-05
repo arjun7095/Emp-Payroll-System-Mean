@@ -1,0 +1,17 @@
+.main{
+    background-color: rgb(25, 25, 40);
+}
+.leaves{
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    padding-top: 50px;
+}
+.leaves button{
+    background-color: inherit;
+    color: orangered;
+}
+.leaves button:hover{
+    background-color: green;
+    color: white;
+}

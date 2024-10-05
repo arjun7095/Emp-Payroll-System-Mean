@@ -1,0 +1,20 @@
+.main{
+    background-color: rgb(25,25,40);
+}
+.attendance{
+    color: white;
+    height: 100vh;
+}
+.attendance input{
+    font-size: 20px;
+}
+.attendance button{
+    background-color: inherit;
+    color: orangered;
+    margin-top: 20px;
+}
+.attendance button:hover{
+    background-color: green;
+    color:white;
+    
+}

@@ -1,0 +1,17 @@
+.main{
+    background-color: rgb(25, 25, 40);
+}
+.dash{
+    
+    background-size: cover;
+    color: white;
+    height: 100vh;
+}
+.dash button{
+    background-color: inherit;
+    color: orangered;
+}
+.dash button:hover{
+    background-color: green;
+    color: white;
+}

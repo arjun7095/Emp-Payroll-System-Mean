@@ -1,0 +1,48 @@
+<div class="main">
+<app-adminsnav></app-adminsnav>
+<div class="work-schedule-container">
+    <h2>Assign Work</h2>
+    <div class="work-schedule-form">
+      
+        <label for="empId">Employee ID:</label>
+        <input type="text" id="empId" [(ngModel)]="empId" required/>
+  
+        <label for="work">Work Details:</label>
+        <input type="text" id="work" [(ngModel)]="work" required /><br/>
+  
+        <label for="date">Date:</label><br/>
+        <input type="date" id="date" [(ngModel)]="date" [min]="minDate" required=""/>
+  
+        <button (click)="handleAssignWork()">Assign Work</button>
+   
+    </div>
+    <p *ngIf="error" class="work-schedule-error-message">{{ error }}</p>
+    <p *ngIf="successMessage" class="work-schedule-success-message">{{ successMessage }}</p>
+  
+    <h2>Get Work Schedule</h2>
+    <div class="work-schedule-form">
+      
+        <label for="scheduleDate">Date:</label>
+        <input type="date" id="date" [(ngModel)]="date" />
+        <button (click)="handleGetWorkSchedule()">Get Work Schedule</button>
+     
+    </div>
+  
+    <table *ngIf="resultArray.length > 0" class="work-schedule-table">
+      <thead>
+        <tr align="center">
+          <th>Employee ID</th>
+          <th>Work Details</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let schedule of resultArray; let i = index">
+          <td>{{ schedule.empId }}</td>
+          <td>{{ schedule.work }}</td>
+          <td>{{ schedule.date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

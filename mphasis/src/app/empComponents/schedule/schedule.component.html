@@ -1,0 +1,27 @@
+<div class="main">
+<app-empnav></app-empnav>
+<div class="schedule-container">
+    <h2>Schedule Details</h2>
+    <p *ngIf="error" class="error-message">{{ error }}</p>
+    <label for="dateInput" class="date-label">Date:</label>
+    <input id="dateInput" type="date" [(ngModel)]="date" (change)="onDateChange($event)" class="date-input" />
+    <div class="table-container">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Employee ID</th>
+            <th>Work</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let schedule of scheduleDetails">
+            <td>{{ schedule.empId }}</td>
+            <td>{{ schedule.work }}</td>
+            <td>{{ schedule.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

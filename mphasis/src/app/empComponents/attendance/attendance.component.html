@@ -1,0 +1,14 @@
+<div class="main">
+  <app-empnav></app-empnav>
+
+  <div align="center" class="attendance">
+    <h2>Attendance Form</h2>
+    <input type="text" [(ngModel)]="empId" placeholder="Employee ID" /><br>
+    <input type="time" [(ngModel)]="punchInTime" placeholder="Punch In Time" /><br>
+    <input type="time" [(ngModel)]="punchOutTime" placeholder="Punch Out Time" /><br>
+    <input type="date" [(ngModel)]="date" [min]="minDate" /><br>
+    <button (click)="handleAttendanceSubmit()">Submit</button>
+    <p *ngIf="error" style="color: red">{{ error }}</p>
+    <p *ngIf="successMessage" style="color: green">{{ successMessage }}</p>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div align="center" class="register" style="background-image: url('./assets/images/home2.jpg');">
+    
+    <fieldset class="field" align="left" >
+      <h2>Registration</h2>
+    
+        <label>Username:</label>
+        <input type="text" [(ngModel)]="username" placeholder="Enter your Full name" /><br />
+  
+        <label>Email:</label> 
+        <input type="email" [(ngModel)]="email" placeholder="example@gmail.com" /><br />
+  
+        <label>Role:</label>
+        <select [(ngModel)]="role">
+          <option value="">Select category</option>
+          <option value="admin">Admin</option>
+          <option value="employee">Employee</option>
+        </select><br />
+  
+        <label>Password:</label>
+        <input type="password" [(ngModel)]="password" placeholder="Set your Password" /><br />
+  
+        <button class="auth-btn" type="submit"(click)="handleRegistration()">Register</button>
+     
+      <p>Already an account? <a href="/">Login</a></p>
+    </fieldset>
+    
+  </div>

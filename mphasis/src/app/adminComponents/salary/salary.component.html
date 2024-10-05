@@ -1,0 +1,78 @@
+<div class="main">
+  <app-adminsnav></app-adminsnav>
+
+  <div align="center" class='salary'>
+    <h2>Salary Details</h2>
+    <p *ngIf="error" style="color: red;">{{ error }}</p>
+    <div>
+      <label for="month">Select Month:</label>
+      <select [(ngModel)]="selectedMonth">
+        <option value="">Select Month</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+
+      <label for="year">Select Year:</label>
+      <select [(ngModel)]="selectedYear">
+        <option value="">Select Year</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+      </select>
+    </div>
+    <button (click)="handleGetSalary()">Get Salary Details</button>
+
+    <table *ngIf="salaryData.length > 0">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Employee Name</th>
+          <th>Salary</th>
+          <th>PF Deduction</th>
+          <th>Tax Deduction</th>
+          <th>Net Salary</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let salary of salaryData">
+          <td>{{ salary.empId }}</td>
+          <td>{{ salary.name }}</td>
+          <td>{{ salary.salary }}</td>
+          <td>{{ calculatePFDeduction(salary.salary) }}</td>
+          <td>{{ calculateTaxDeduction(salary.salary) }}</td>
+          <td>{{ salary.salary - calculatePFDeduction(salary.salary) - calculateTaxDeduction(salary.salary) }}</td>
+          <td>
+            <!-- Update Salary -->
+            <input type="number" [(ngModel)]="newSalary" placeholder="New Salary">
+            <button (click)="updateSalary(salary.empId)">Update</button>
+            
+            <!-- Delete Salary -->
+            <button (click)="deleteSalary(salary.empId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Add Salary Input Boxes -->
+    <div>
+      <label for="newEmpId">Employee ID:</label>
+      <input type="text" [(ngModel)]="newEmpId" placeholder="Employee ID">
+      <label for="newEmpId">Employee Name:</label>
+      <input type="text" [(ngModel)]="newName" placeholder="Employee Name">
+      <label for="newSalary">Salary:</label>
+      <input type="number" [(ngModel)]="newSalary" placeholder="Salary">
+      <button (click)="addSalary()">Add Salary</button>
+    </div>
+  </div>
+</div>

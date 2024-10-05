@@ -1,0 +1,35 @@
+.register{
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+.register fieldset{
+    width: 30%;
+    padding-top: 100px;
+}
+.register label{
+    width: 25%;
+    font-size: 20px;
+}
+.register label,input{
+    margin: 5px;
+}
+.auth-btn{
+    background-color: inherit;
+    color: orangered;
+    font-size: 20px;
+    margin-left: 25%;
+    margin-top: 30px;
+}
+.auth-btn:hover{
+    background-color: green;
+    color: white;
+}
+.register p{
+    text-align: center;
+    margin-top: 10px;
+}
+.register h2{
+    text-align: center;
+    margin-bottom: 20px;
+}

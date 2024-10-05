@@ -1,0 +1,13 @@
+<!-- Login Details -->
+<div *ngIf="!loggedIn" class="login" style="background-image: url('./assets/images/home2.jpg');">
+    
+    <fieldset align="center">
+      <h1>Login</h1>
+      <label>Username :</label> <input type="text" [(ngModel)]="email" placeholder="Example@gmail.com" required /><br />
+      <label>Password :</label> <input type="password" [(ngModel)]="password" placeholder="Password" required /><br />
+      <button class="auth-btn" (click)="handleLogin()">Login</button>
+      <button class="auth-btn"(click)="handleRegister()">Register</button>
+    </fieldset>
+  </div>
+<router-outlet></router-outlet>
+

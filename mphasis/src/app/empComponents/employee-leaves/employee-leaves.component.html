@@ -1,0 +1,27 @@
+<div class="main">
+<app-empnav></app-empnav>
+
+<div align="center"class="leaves">
+    <h2>Apply for Leave</h2>
+    <form (submit)="handleSubmit()" >
+      <label>Employee ID:</label>
+      <input type="text" name="empId" [(ngModel)]="empId" required placeholder="Enter Employee Id"/><br/>
+      <label>Name:</label>
+      <input type="text" name="name" [(ngModel)]="name" required placeholder="Enter your Name"/><br/>
+      <label>Leave Type:</label>
+      <select name="leaveType" [(ngModel)]="leaveType" required>
+        <option value="">Select Leave Type</option>
+        <option value="Sick Leave">Sick Leave</option>
+        <option value="Vacation">Vacation</option>
+        <!-- Add more leave types as needed -->
+      </select><br/>
+      <label>Start Date:</label>
+      <input type="date" name="startDate" [(ngModel)]="startDate" [min]="minDate" required /><br/>
+      <label>End Date:</label>
+      <input type="date" name="endDate" [(ngModel)]="endDate"[min]="minDate" required /><br/>
+      <label>Reason:</label>
+      <textarea name="reason" [(ngModel)]="reason" required placeholder="Type the reason"></textarea><br/>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>  

@@ -1,0 +1,28 @@
+<div class="main">
+<app-adminsnav></app-adminsnav>
+<div align="center"class='time'>
+    <h2>Timesheet</h2>
+    <input type="date" [(ngModel)]="date"  />
+    <button type="button"(click)="getTimesheets()">Get data</button>
+    <p *ngIf="error">{{ error }}</p>
+    <table border="2px" cellSpacing="0" width="800">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Punch In</th>
+          <th>Punch Out</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let timesheet of timesheets; let i = index">
+          <td>{{ timesheet.empId }}</td>
+          <td>{{ timesheet.punchIn }}</td>
+          <td>{{ timesheet.punchOut }}</td>
+          <td>{{ timesheet.duration }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
